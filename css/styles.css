@@ -383,6 +383,10 @@ input[type='checkbox'] {
 	}
 }
 
+#map {
+    height: 100%;
+}
+
 #callMeButtonCustom {
   display: inline-block;
 	width: 20%;
