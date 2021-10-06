@@ -1010,7 +1010,7 @@ Our customers can be certain that all our cars are competitively and transparent
                 <div class="col-lg-6">
                     <div class="text-container">
                         <div class="section-title">CONTACT</div>
-                        <h2>Get In Touch</h2>
+                        <h2>Get In Touch Using The Form</h2>
                         <p>You can contact Longo management team by filling the form. Just write your name, e-mail, message and your request will be directed to the right person </p>
                         <ul class="list-unstyled li-space-lg">
                             <li class="address"><i class="fas fa-map-marker-alt"></i>Audēju iela 15, Rīga, Latvia, LV-1050</li>
@@ -1041,23 +1041,22 @@ Our customers can be certain that all our cars are competitively and transparent
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
-<div id="map"></div>
+
                     <!-- Contact Form -->
-                    <!--
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
+                    <form  action="mailto:info@longo.group" method="get" enctype="text/plain" data-focus="false" target="_blank">
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
+                            <input type="text" class="form-control-input" name="name" id="name" required>
+                            <label class="label-control" for="name">Name</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
+                            <input type="text" name="email" class="form-control-input" id="email" required>
+                            <label class="label-control" for="email">Email</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Your message</label>
+                            <textarea name="text" class="form-control-textarea" id="comments" required></textarea>
+                            <label class="label-control" for="comments">Your message</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group checkbox">
@@ -1065,13 +1064,13 @@ Our customers can be certain that all our cars are competitively and transparent
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
+                            <button type="submit" name="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
                         </div>
                         <div class="form-message">
                             <div id="cmsgSubmit" class="h3 text-center hidden"></div>
                         </div>
                     </form>
-                -->
+
                     <!-- end of contact form -->
 
                 </div> <!-- end of col -->
@@ -1139,97 +1138,5 @@ Our customers can be certain that all our cars are competitively and transparent
     <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAGGj9KAwjRwTbhtlW5qjRD3BFaxf2-nw&callback=initMap"async defer></script>
-    <script>
-	function initMap() {
-		// Styles a map in night mode.
-		var uluru = {lat: 56.947238965146994, lng: 24.112898087339826};
-		var map = new google.maps.Map(document.getElementById('map'), {
-			center: uluru,
-			zoom: 13,
-			styles: [
-				{elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-				{elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-				{elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-				{
-					featureType: 'administrative.locality',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#d59563'}]
-				},
-				{
-					featureType: 'poi',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#d59563'}]
-				},
-				{
-					featureType: 'poi.park',
-					elementType: 'geometry',
-					stylers: [{color: '#263c3f'}]
-				},
-				{
-					featureType: 'poi.park',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#6b9a76'}]
-				},
-				{
-					featureType: 'road',
-					elementType: 'geometry',
-					stylers: [{color: '#38414e'}]
-				},
-				{
-					featureType: 'road',
-					elementType: 'geometry.stroke',
-					stylers: [{color: '#212a37'}]
-				},
-				{
-					featureType: 'road',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#9ca5b3'}]
-				},
-				{
-					featureType: 'road.highway',
-					elementType: 'geometry',
-					stylers: [{color: '#746855'}]
-				},
-				{
-					featureType: 'road.highway',
-					elementType: 'geometry.stroke',
-					stylers: [{color: '#1f2835'}]
-				},
-				{
-					featureType: 'road.highway',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#f3d19c'}]
-				},
-				{
-					featureType: 'transit',
-					elementType: 'geometry',
-					stylers: [{color: '#2f3948'}]
-				},
-				{
-					featureType: 'transit.station',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#d59563'}]
-				},
-				{
-					featureType: 'water',
-					elementType: 'geometry',
-					stylers: [{color: '#17263c'}]
-				},
-				{
-					featureType: 'water',
-					elementType: 'labels.text.fill',
-					stylers: [{color: '#515c6d'}]
-				},
-				{
-					featureType: 'water',
-					elementType: 'labels.text.stroke',
-					stylers: [{color: '#17263c'}]
-				}
-			]
-		});
-		var marker = new google.maps.Marker({position: uluru, map: map});
-	}
-</script>
 </body>
 </html>
