@@ -1067,10 +1067,12 @@ input[type='checkbox'] {
 
 .accordion h2 {
 	margin-bottom: 1.625rem;
+	text-align: center;
 }
 
 .accordion-2 h2 {
 	margin-bottom: 1.625rem;
+	text-align: center;
 }
 
 .accordion .item {
@@ -2670,7 +2672,7 @@ a:hover.back-to-top {
 
 	/* Footer */
 	.footer .text-container.about {
-		margin-right: 5rem;
+		margin-right: 4rem;
 	}
 	/* end of footer */
 
