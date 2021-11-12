@@ -2070,7 +2070,7 @@ a:hover.back-to-top {
 	margin-top: 1.75rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 	.basic-2 .team-member .job-title {
 		min-height: 41px;
 	}
