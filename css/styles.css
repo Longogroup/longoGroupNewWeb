@@ -1034,6 +1034,10 @@ input[type='checkbox'] {
 	background-color: #fff;
 }
 
+#investors-hover:hover {
+  color: #ffbf14;
+}
+
 
 /*************************/
 /*     08. Details 1     */
@@ -2016,7 +2020,18 @@ a:hover.back-to-top {
 	text-align: center;
 }
 
+.ex-header-investors{
+	padding-top: 8rem;
+	padding-bottom: 1rem;
+	background-color: #004371;
+	text-align: center;
+}
+
 .ex-header h1 {
+	color: #fff;
+}
+
+.ex-header-investors h1 {
 	color: #fff;
 }
 
@@ -2256,6 +2271,11 @@ a:hover.back-to-top {
 	.ex-header {
 		padding-top: 11rem;
 		padding-bottom: 9rem;
+	}
+
+	.ex-header-investors {
+		padding-top: 11rem;
+		padding-bottom: 1rem;
 	}
 
 	.ex-basic-2 .form-container {
@@ -2506,6 +2526,12 @@ a:hover.back-to-top {
 
 	/* Extra Pages */
 	.ex-header h1 {
+		width: 80%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.ex-header-investors h1 {
 		width: 80%;
 		margin-right: auto;
 		margin-left: auto;
